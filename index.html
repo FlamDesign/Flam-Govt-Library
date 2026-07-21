@@ -4,22 +4,35 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#141414">
-<title>Flam · Govt Demos</title>
+<meta name="theme-color" content="#3E503C">
+<title>Flam · Govt Projects</title>
 <style>
   /* Critical: paint background immediately before fonts/CSS load — prevents white flash on mobile */
-  html,body{background:#141414!important;color:#e8e6e3}
+  html,body{background:#3E503C!important;color:#F3ECDB}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Roboto+Condensed:wght@600;700&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  /* ── Govt Demos — deep navy/indigo palette ── */
-  --ink:#e8e8f0;--ink2:#a0a0b8;--ink3:#60607a;
-  --paper:#0f0f1a;--surface:#181828;--wash:#20203a;--rule:#28284a;--rule2:#34345a;
-  --flame:#4f7cff;--flame-bg:rgba(79,124,255,.15);
-  --green:#2ecc71;--green-bg:rgba(46,204,113,.12);
+  /* ── Flam Govt Projects color palette ──
+     #3E503C  dark forest  → deepest backgrounds
+     #7F886A  sage green   → cards, surfaces, sidebar
+     #F3ECDB  warm cream   → all text
+     #FF6F3D  terracotta   → buttons, accent, badges
+  ── */
+  --ink:#F3ECDB;
+  --ink2:#c4bb9e;
+  --ink3:#8a8270;
+  --paper:#3E503C;
+  --surface:#4a5e47;
+  --wash:#556857;
+  --rule:#5a7257;
+  --rule2:#657d60;
+  --flame:#FF6F3D;
+  --flame-bg:rgba(255,111,61,.18);
+  --green:#7F886A;
+  --green-bg:rgba(127,136,106,.25);
   --font-d:'Roboto Condensed','Roboto',sans-serif;
   --font-b:'DM Sans',sans-serif;
   --r:10px;
@@ -38,7 +51,7 @@ button,select{font-family:var(--font-b)}
 .topbar{
   position:sticky;top:0;z-index:200;height:56px;padding:0 28px;
   display:flex;align-items:center;gap:18px;
-  background:linear-gradient(180deg,rgba(15,15,26,.98) 0%,rgba(15,15,26,.85) 100%);
+  background:linear-gradient(180deg,rgba(62,80,60,.98) 0%,rgba(62,80,60,.85) 100%);
   backdrop-filter:blur(16px);
   border-bottom:1px solid var(--rule);
 }
@@ -77,7 +90,7 @@ button,select{font-family:var(--font-b)}
 /* ── SIDEBAR ── */
 .sidebar{
   width:214px;flex-shrink:0;padding:22px 14px 32px;
-  background:#141424;border-right:1px solid var(--rule);
+  background:#3a4e38;border-right:1px solid var(--rule);
   position:sticky;top:56px;height:calc(100vh - 56px);overflow-y:auto;
 }
 .sidebar::-webkit-scrollbar{width:0}
@@ -86,7 +99,7 @@ button,select{font-family:var(--font-b)}
 .sb-label::after{content:'';flex:1;height:1px;background:var(--rule)}
 .f-row{display:flex;align-items:center;gap:6px;padding:5px 8px;border-radius:7px;cursor:pointer;transition:background .12s;user-select:none}
 .f-row:hover{background:var(--wash)}
-.f-row.on{background:rgba(232,75,26,.2)}
+.f-row.on{background:rgba(255,111,61,.2)}
 .f-row.on .f-label{color:var(--flame);font-weight:500}
 .f-row.on .f-n{background:rgba(232,75,26,.12);color:var(--flame)}
 .f-label{flex:1;font-size:12.5px;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -111,7 +124,7 @@ button,select{font-family:var(--font-b)}
 
 /* ── CARD ── */
 .card{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r);overflow:hidden;cursor:pointer;transition:transform .25s cubic-bezier(.22,.68,0,1.2),box-shadow .25s,border-color .2s;animation:rise .28s ease both}
-.card:hover{transform:scale(1.06);box-shadow:0 12px 40px rgba(0,0,0,.7);border-color:rgba(255,255,255,.15);z-index:2;position:relative}
+.card:hover{transform:scale(1.06);box-shadow:0 12px 40px rgba(0,0,0,.7);border-color:rgba(243,236,219,.2);z-index:2;position:relative}
 @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 
 .c-thumb{position:relative;aspect-ratio:16/9;background:var(--wash);overflow:hidden}
@@ -225,7 +238,7 @@ button,select{font-family:var(--font-b)}
 /* ── MODAL: side-by-side 80% screen ── */
 .modal{
   display:flex;flex-direction:row;
-  background:#181828;border-radius:18px;
+  background:#4a5e47;border-radius:18px;
   width:88vw;max-width:1200px;height:84vh;max-height:880px;
   overflow:hidden;box-shadow:var(--sh-l);
   animation:popup .22s cubic-bezier(.22,.68,0,1.2);
@@ -238,7 +251,7 @@ button,select{font-family:var(--font-b)}
   width:300px;flex-shrink:0;
   display:flex;flex-direction:column;
   border-right:1px solid var(--rule);
-  background:#1a1a1a;
+  background:#3E503C;
   overflow:hidden;
 }
 .modal-info-head{
@@ -317,7 +330,7 @@ button,select{font-family:var(--font-b)}
 .modal-player .video-poster .play-ring-lg{position:absolute;width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(0,0,0,.5)}
 .modal-player .video-poster .play-ring-lg svg{width:18px;fill:#111;margin-left:3px}
 .modal-player.ready .video-poster{opacity:0;pointer-events:none}
-.no-embed{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:#111;color:rgba(255,255,255,.4);font-size:13px}
+.no-embed{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:#3E503C;color:rgba(255,255,255,.4);font-size:13px}
 .no-embed-icon{font-size:38px;opacity:.5}
 
 /* new-this-week badge */
@@ -329,7 +342,7 @@ button,select{font-family:var(--font-b)}
 
 .panel-overlay{display:none;position:fixed;inset:0;z-index:250;background:rgba(24,18,14,.35)}
 .panel-overlay.open{display:block;animation:fadein .15s ease}
-.panel{position:fixed;right:0;top:0;bottom:0;width:340px;z-index:251;background:#1a1a1a;border-left:1px solid var(--rule);overflow-y:auto;box-shadow:var(--sh-l);transform:translateX(100%);transition:transform .22s ease}
+.panel{position:fixed;right:0;top:0;bottom:0;width:340px;z-index:251;background:#3E503C;border-left:1px solid var(--rule);overflow-y:auto;box-shadow:var(--sh-l);transform:translateX(100%);transition:transform .22s ease}
 .panel.open{transform:none}
 .panel-inner{padding:24px 22px}
 .panel-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
@@ -354,7 +367,7 @@ button,select{font-family:var(--font-b)}
 
 /* ── SETUP SCREEN ── */
 .setup{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px}
-.setup-card{background:#1f1f1f;border:1px solid var(--rule);border-radius:16px;padding:40px;width:100%;max-width:480px;box-shadow:var(--sh-s)}
+.setup-card{background:#4a5e47;border:1px solid var(--rule);border-radius:16px;padding:40px;width:100%;max-width:480px;box-shadow:var(--sh-s)}
 .setup-h{font-family:var(--font-d);font-size:26px;margin-bottom:6px}
 .setup-sub{font-size:13.5px;color:var(--ink2);margin-bottom:28px;line-height:1.65}
 .s-field{margin-bottom:12px}
@@ -525,7 +538,7 @@ button,select{font-family:var(--font-b)}
   .mob-tab-bar{
     flex-shrink:0;
     height:44px;
-    background:#111;
+    background:#3E503C;
     border-radius:20px 20px 0 0;
     display:flex;align-items:center;
     padding:0 12px;gap:6px;
@@ -600,7 +613,7 @@ button,select{font-family:var(--font-b)}
   .mob-action-bar{
     flex-shrink:0;
     height:64px;
-    background:#111;
+    background:#3E503C;
     border-top:0.5px solid rgba(255,255,255,.1);
     display:flex;align-items:center;
     padding:0 12px;gap:10px;
@@ -670,9 +683,9 @@ button,select{font-family:var(--font-b)}
   <div class="setup-card">
     <div style="display:flex;align-items:center;gap:9px;margin-bottom:26px">
       <div class="brand-mark"><svg viewBox="0 0 9 10"><polygon points="1,1 8,5 1,9"/></svg></div>
-      <span style="font-family:var(--font-d);font-size:18px">Govt Demos</span>
+      <span style="font-family:var(--font-d);font-size:18px">Flam Govt Projects</span>
     </div>
-    <div class="setup-h">Connect Govt Demos sheet</div>
+    <div class="setup-h">Connect Flam Govt Projects sheet</div>
     <div class="setup-sub">Choose how to load your experience data.</div>
 
     <div class="tabs">
@@ -708,7 +721,7 @@ button,select{font-family:var(--font-b)}
   <header class="topbar">
     <a class="brand" href="#">
       <div class="brand-mark"><svg viewBox="0 0 9 10"><polygon points="1,1 8,5 1,9"/></svg></div>
-      <span class="brand-name">Govt Demos</span>
+      <span class="brand-name">Flam Govt Projects</span>
     </a>
     <div class="search-wrap">
       <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6.5" cy="6.5" r="5"/><path d="M11 11l3.5 3.5"/></svg>
